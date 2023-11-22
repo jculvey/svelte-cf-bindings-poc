@@ -15,4 +15,4 @@ Confirm that it works
 The magic happens in `src/hooks.server.ts`. Svelte doesn't have adapter support in `dev`,
 so this is a workaround to inject bindings into the platform object.
 
-See (this Svelte issue)[https://github.com/sveltejs/kit/issues/4292] for more details.
+See [this Svelte issue](https://github.com/sveltejs/kit/issues/4292) for more details.
