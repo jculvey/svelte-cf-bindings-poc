@@ -1,6 +1,6 @@
 import { dev } from "$app/environment";
 
-let env:any = {};
+let env = {};
 
 if (dev) {
   /*
@@ -15,9 +15,9 @@ if (dev) {
 
   const mf = new Miniflare({
     kvNamespaces: ["TEST_KV"],
-    kvPersist: true,
+    kvPersist: ".wrangler/state/v3/kv",
     d1Databases: ["TEST_D1"],
-    d1Persist: true,
+    d1Persist: ".wrangler/state/v3/d1",
     modules: true,
     script: ""
   });

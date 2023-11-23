@@ -48,20 +48,6 @@
     }
   };
 
-  const onD1Setup = async () => {
-    const response = await fetch("/api/d1/setup", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    if (response.ok) {
-      const data = await response.json();
-      readValueD1 = data.d1Result;
-    } else {
-      readValueD1 = { error: response.statusText };
-    }
-  };
 </script>
 
 <h1>Welcome to SvelteKit with Cloudflare Pages "pnpm dev" local support</h1>
@@ -105,16 +91,15 @@
 <table>
   <tr>
     <td>
-      <button on:click={onD1Setup}>Setup D1 Data</button>
       <button on:click={onD1Post}>Write D1 Data</button>
       <button on:click={onD1Get}>Read D1 Data</button>
     </td>
   </tr>
   <tr>
     <td>
-      <code>
+      <pre>
         {JSON.stringify(readValueD1, null, 2)}
-      </code>
+      </pre>
     </td>
   </tr>
 </table>
