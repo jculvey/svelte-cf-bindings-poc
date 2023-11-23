@@ -1,6 +1,6 @@
 import { dev } from "$app/environment";
 
-let env = {};
+let env:any = {};
 
 if (dev) {
   /*
@@ -15,8 +15,11 @@ if (dev) {
 
   const mf = new Miniflare({
     kvNamespaces: ["TEST_KV"],
+    kvPersist: true,
+    d1Databases: ["TEST_D1"],
+    d1Persist: true,
     modules: true,
-    script: "",
+    script: ""
   });
   env = await mf.getBindings();
 }

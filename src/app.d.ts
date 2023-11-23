@@ -5,6 +5,7 @@ declare global {
         interface Platform {
           env: {
             TEST_KV: KVNamespace;
+            TEST_D1: D1Namespace;
           };
           context: {
             waitUntil(promise: Promise<any>): void;
