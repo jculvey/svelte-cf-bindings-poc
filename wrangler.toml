@@ -1,0 +1,8 @@
+
+
+[[d1_databases]]
+binding = "TEST_D1" # available in your api routes on process.env.TEST_D1
+database_name = "TEST_D1"
+database_id = "TEST_D1"
+preview_database_id = "TEST_D1"
+path = ".mf/d1/"
